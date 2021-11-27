@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.17846341773040245" />
+        <entry key="app/src/main/res/drawable/ic_checkbox_off.xml" value="0.19814814814814816" />
+        <entry key="app/src/main/res/drawable/ic_checkbox_on.xml" value="0.19814814814814816" />
+        <entry key="app/src/main/res/drawable/selector_checkbox.xml" value="0.19814814814814816" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.29355525165091106" />
         <entry key="app/src/main/res/layout/activity_second.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.21241123605051246" />
       </map>

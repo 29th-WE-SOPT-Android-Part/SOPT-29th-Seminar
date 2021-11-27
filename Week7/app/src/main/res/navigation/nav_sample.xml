@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_sample"
+    app:startDestination="@id/sampleFragment1">
+
+    <fragment
+        android:id="@+id/sampleFragment1"
+        android:name="org.quesong.androidseminar.SampleFragment1"
+        android:label="fragment_sample1"
+        tools:layout="@layout/fragment_sample1" >
+        <action
+            android:id="@+id/action_sampleFragment1_to_sampleFragment2"
+            app:destination="@id/sampleFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/sampleFragment2"
+        android:name="org.quesong.androidseminar.SampleFragment2"
+        android:label="fragment_sample2"
+        tools:layout="@layout/fragment_sample2" >
+        <action
+            android:id="@+id/action_sampleFragment2_to_sampleFragment3"
+            app:destination="@id/sampleFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/sampleFragment3"
+        android:name="org.quesong.androidseminar.SampleFragment3"
+        android:label="fragment_sample3"
+        tools:layout="@layout/fragment_sample3" />
+</navigation>

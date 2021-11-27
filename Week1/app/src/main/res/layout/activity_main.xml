@@ -61,7 +61,7 @@
         android:layout_marginEnd="20dp"
         android:ems="10"
         android:hint="비밀번호를 입력해주세요"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tv_pass"
@@ -87,5 +87,23 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_login"
         app:layout_constraintStart_toStartOf="@+id/btn_login" />
+
+    <ImageButton
+        android:id="@+id/ib_auto_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/selector_checkbox"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_auto_login"
+        app:layout_constraintEnd_toStartOf="@+id/tv_auto_login"
+        app:layout_constraintTop_toTopOf="@+id/tv_auto_login" />
+
+    <TextView
+        android:id="@+id/tv_auto_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="자동 로그인"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_id"
+        app:layout_constraintEnd_toEndOf="@+id/et_id" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,13 +17,32 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
 
-        val intent = Intent(this, SecondActivity::class.java)
-
         binding.btnLogin.setOnClickListener {
             initNetwork()
         }
+
+        initClickEvent()
+        isAutoLogin()
+
         setContentView(binding.root)
     }
+
+    private fun initClickEvent() {
+        binding.ibAutoLogin.setOnClickListener {
+            binding.ibAutoLogin.isSelected = !binding.ibAutoLogin.isSelected
+
+            SOPTSharedPreferences.setAutoLogin(this, binding.ibAutoLogin.isSelected)
+        }
+    }
+
+    private fun isAutoLogin() {
+        if(SOPTSharedPreferences.getAutoLogin(this)) {
+            shortToast("자동로그인 완료")
+            startActivity(Intent(this, SecondActivity::class.java))
+            finish()
+        }
+    }
+
 
     private fun initNetwork() {
         val requestLoginData = RequestLoginData(
@@ -39,9 +58,11 @@ class MainActivity : AppCompatActivity() {
                 response: Response<ResponseLoginData>
             ) {
                 if(response.isSuccessful) {
-                    Toast.makeText(this@MainActivity, "${response.body()?.data?.name}님 반갑습니다", Toast.LENGTH_SHORT).show()
+
+                    shortToast("${response.body()?.data?.name}님 반갑습니다")
 
                     startActivity(Intent(this@MainActivity, SecondActivity::class.java))
+                    finish()
                 }
                 else {
 
